@@ -15,7 +15,7 @@
   shell: 
     executable: /bin/bash
     cmd: "set -o pipefail && [ -x {{ redis_install_dir }}/bin/redis-cli ] && {{ redis_install_dir }}/bin/redis-cli --version | cut -d' ' -f2"
-  check_mode: no
+  # check_mode: no
   changed_when: false
   failed_when: false
   register: redis_runtime_version_result
